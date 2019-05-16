@@ -35,6 +35,11 @@ public class TestStream {
         list.stream()
                 .sorted((o1, o2) -> 1)
                 .forEach(PRINTLN);
+
+        System.out.println("-----------------");
+        list.stream()
+                .sorted((Comparator.comparingInt(o -> (int) o).reversed()))
+                .forEach(PRINTLN);
     }
 
     @Test
